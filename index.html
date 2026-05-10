@@ -80,4 +80,54 @@ body.light .toggle-btn{
 </div>
 
 <div style="margin:0.8vh 0;">
-  <img src="maryam%20(1).jpg" alt="Mary
+  <img src="maryam%20(1).jpg" alt="Maryam">
+</div>
+
+<p><b>Day 1 of becoming a developer.</b></p>
+<p>Clickworker lost me. Coding found me.</p>
+<p style="color:#3b82f6;"><b>Day 2: I make things pretty.</b></p>
+
+<div class="card">
+  <h2>What I Build 💻</h2>
+  <p>✅ Business Websites — from ₦50,000</p>
+  <p>✅ Portfolios — from ₦50,000</p>
+  <p>✅ Online Stores — from ₦80,000</p>
+  <p style="color:#25d366;">⚡ 2hr response time guaranteed</p>
+</div>
+
+<div class="card">
+  <h2>My Projects</h2>
+  <p><b>Glow Beauty Spa</b></p>
+  <p>Modern spa website with booking system</p>
+  <p><a href="#">View Demo →</a></p>
+  
+  <p><b>Kairo Eats Restaurant</b></p>
+  <p>Online menu + WhatsApp ordering</p>
+  <p><a href="#">View Demo →</a></p>
+</div>
+
+<div style="text-align:center;">
+  <a href="https://wa.me/2349046701750" class="btn whatsapp">WhatsApp Me</a>
+  <a href="mailto:maryamabdulkareem042@gmail.com" class="btn email">Email Me</a>
+  
+  <p style="font-size:1.3vh;margin-top:0.8vh;color:#888;">
+    © 2026 Dev Maryam | Built with love in Cairo ❤️<br>
+    Chief Dr. Dev Maryam — Your Tech Queen 👑
+  </p>
+</div>
+
+<script>
+const btn = document.getElementById('toggleBtn');
+const body = document.body;
+
+btn.onclick = () => {
+  body.classList.toggle('light');
+  if(body.classList.contains('light')){
+    btn.innerHTML='🌙 Dark Mode';
+  } else {
+    btn.innerHTML='☀️ Light Mode';
+  }
+}
+</script>
+</body>
+</html>
