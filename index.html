@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maryam | Portfolio</title>
+<title>Maryam | Web Developer & Designer</title>
 <style>
 body {
   margin:0; 
@@ -11,9 +11,14 @@ body {
   background:#0d0d0d; 
   color:#fff; 
   text-align:center; 
-  padding:1vh 1.2vh;
+  padding:0;
   transition:0.3s;
 }
+
+.content {
+  padding:1vh 1.2vh;
+}
+
 h1 {font-size:2.4vh;font-weight:700;margin:0.5vh 0 0.8vh 0;}
 h2 {font-size:2vh;margin:0.5vh 0;}
 p {font-size:1.6vh;margin:0.4vh 0;line-height:1.3;}
@@ -54,9 +59,8 @@ a {color:#ff4fa3;text-decoration:none;font-weight:bold;}
 
 /* Full width toggle bar */
 .toggle-bar {
-  background:#ff4fa3;
+  background:#333;
   width:100%;
-  margin:0 -1.2vh 0.8vh -1.2vh;
   padding:0.8vh 0;
   text-align:center;
   cursor:pointer;
@@ -78,53 +82,58 @@ body.light .card{
   box-shadow:0 3px 10px rgba(255,79,163,0.25);
 }
 body.light .toggle-bar{
-  background:#333;
+  background:#ff4fa3;
+}
+body.light .toggle-bar span{
+  color:#fff;
 }
 </style>
 </head>
 <body>
 
-<h1>Hello, I am Maryam</h1>
-
 <div class="toggle-bar" id="toggleBtn">
   <span>🌙 Dark Mode</span>
 </div>
 
-<div style="margin:0.8vh 0;">
-  <img src="maryam%20(1).jpg" alt="Maryam">
-</div>
+<div class="content">
+  <h1>Maryam | Web Developer & Designer</h1>
 
-<h1>Web Developer & Problem Solver</h1>
-<p>I design and code websites that make brands look premium. Specializing in business websites, portfolios, and online stores.</p>
-<p style="color:#3b82f6; font-size:1.7vh;"><b>Turning ideas into fast, clean websites.</b></p>
+  <div style="margin:0.8vh 0;">
+    <img src="maryam%20(1).jpg" alt="Maryam">
+  </div>
 
-<div class="card">
-  <h2>What I Build 💻</h2>
-  <p>✅ Business Websites — starting from <b>₦70,000</b></p>
-  <p>✅ Portfolios — starting from <b>₦70,000</b></p>
-  <p>✅ Online Stores — starting from <b>₦120,000</b></p>
-  <p style="color:#25d366;">⚡ 2hr response time guaranteed</p>
-</div>
+  <h2>I Build Websites That Make Brands Look Premium</h2>
+  <p>Specializing in business websites, portfolios, and online stores for clients in Nigeria and beyond.</p>
+  <p style="color:#3b82f6; font-size:1.7vh;"><b>Turning ideas into fast, clean websites.</b></p>
 
-<div class="card">
-  <h2>My Projects</h2>
-  <p><b>Glow Beauty Spa</b></p>
-  <p>Modern spa website with booking system</p>
-  <p><a href="#">View Demo →</a></p>
-  
-  <p><b>Kairo Eats Restaurant</b></p>
-  <p>Online menu + WhatsApp ordering</p>
-  <p><a href="#">View Demo →</a></p>
-</div>
+  <div class="card">
+    <h2>What I Build 💻</h2>
+    <p>✅ Business Websites — starting from <b>₦70,000</b></p>
+    <p>✅ Portfolios — starting from <b>₦70,000</b></p>
+    <p>✅ Online Stores — starting from <b>₦120,000</b></p>
+    <p style="color:#25d366;">⚡ 2hr response time guaranteed</p>
+  </div>
 
-<div style="text-align:center;">
-  <a href="https://wa.me/2349046701750" class="btn whatsapp">WhatsApp Me</a>
-  <a href="mailto:maryamabdulkareem042@gmail.com" class="btn email">Email Me</a>
-  
-  <p style="font-size:1.3vh;margin-top:0.8vh;color:#888;">
-    © 2026 Dev Maryam | Built with love in Cairo ❤️<br>
-    Chief Dr. Dev Maryam — Your Tech Queen 👑
-  </p>
+  <div class="card">
+    <h2>My Projects</h2>
+    <p><b>Glow Beauty Spa</b></p>
+    <p>Modern spa website with booking system</p>
+    <p><a href="#">View Demo →</a></p>
+    
+    <p><b>Kairo Eats Restaurant</b></p>
+    <p>Online menu + WhatsApp ordering</p>
+    <p><a href="#">View Demo →</a></p>
+  </div>
+
+  <div style="text-align:center;">
+    <a href="https://wa.me/2349046701750" class="btn whatsapp">WhatsApp Me</a>
+    <a href="mailto:maryamabdulkareem042@gmail.com" class="btn email">Email Me</a>
+    
+    <p style="font-size:1.3vh;margin-top:0.8vh;color:#888;">
+      © 2026 Dev Maryam | Built with love in Cairo ❤️<br>
+      Chief Dr. Dev Maryam — Your Tech Queen 👑
+    </p>
+  </div>
 </div>
 
 <script>
@@ -132,12 +141,16 @@ const btn = document.getElementById('toggleBtn');
 const btnText = btn.querySelector('span');
 const body = document.body;
 
+btn.style.background='#333';
+
 btn.onclick = () => {
   body.classList.toggle('light');
   if(body.classList.contains('light')){
     btnText.innerHTML='☀️ Light Mode';
+    btn.style.background='#ff4fa3';
   } else {
     btnText.innerHTML='🌙 Dark Mode';
+    btn.style.background='#333';
   }
 }
 </script>
