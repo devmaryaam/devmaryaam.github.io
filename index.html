@@ -48,13 +48,25 @@ img {
   text-decoration:none;
   display:inline-block;
 }
-.toggle-btn {
-  background:#ff4fa3;
-  color:#fff;
-}
 .whatsapp{background:#25d366;}
 .email{background:#ff4fa3;}
 a {color:#ff4fa3;text-decoration:none;font-weight:bold;}
+
+/* Full width toggle bar */
+.toggle-bar {
+  background:#ff4fa3;
+  width:100%;
+  margin:0 -1.2vh 0.8vh -1.2vh;
+  padding:0.8vh 0;
+  text-align:center;
+  cursor:pointer;
+  transition:0.3s;
+}
+.toggle-bar span {
+  color:#fff;
+  font-size:1.7vh;
+  font-weight:bold;
+}
 
 body.light {
   background:#ffe6f0;
@@ -65,9 +77,8 @@ body.light .card{
   color:#111;
   box-shadow:0 3px 10px rgba(255,79,163,0.25);
 }
-body.light .toggle-btn{
+body.light .toggle-bar{
   background:#333;
-  color:#fff;
 }
 </style>
 </head>
@@ -75,8 +86,8 @@ body.light .toggle-btn{
 
 <h1>Hello, I am Maryam</h1>
 
-<div style="margin:0.5vh 0;">
-  <button class="btn toggle-btn" id="toggleBtn">☀️ Light Mode</button>
+<div class="toggle-bar" id="toggleBtn">
+  <span>🌙 Dark Mode</span>
 </div>
 
 <div style="margin:0.8vh 0;">
@@ -85,13 +96,13 @@ body.light .toggle-btn{
 
 <h1>Web Developer & Problem Solver</h1>
 <p>I design and code websites that make brands look premium. Specializing in business websites, portfolios, and online stores.</p>
-<p style="color:#3b82f6;"><b>Turning ideas into fast, clean websites.</b></p>
+<p style="color:#3b82f6; font-size:1.7vh;"><b>Turning ideas into fast, clean websites.</b></p>
 
 <div class="card">
   <h2>What I Build 💻</h2>
-  <p>✅ Business Websites — starting from ₦70,000</p>
-  <p>✅ Portfolios — starting from ₦70,000</p>
-  <p>✅ Online Stores — starting from ₦120,000</p>
+  <p>✅ Business Websites — starting from <b>₦70,000</b></p>
+  <p>✅ Portfolios — starting from <b>₦70,000</b></p>
+  <p>✅ Online Stores — starting from <b>₦120,000</b></p>
   <p style="color:#25d366;">⚡ 2hr response time guaranteed</p>
 </div>
 
@@ -118,14 +129,15 @@ body.light .toggle-btn{
 
 <script>
 const btn = document.getElementById('toggleBtn');
+const btnText = btn.querySelector('span');
 const body = document.body;
 
 btn.onclick = () => {
   body.classList.toggle('light');
   if(body.classList.contains('light')){
-    btn.innerHTML='🌙 Dark Mode';
+    btnText.innerHTML='☀️ Light Mode';
   } else {
-    btn.innerHTML='☀️ Light Mode';
+    btnText.innerHTML='🌙 Dark Mode';
   }
 }
 </script>
